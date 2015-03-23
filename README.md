@@ -13,7 +13,7 @@ docker build -t sickbeard .
 - guillaumegl/docker-sickbeard
  
 ## Ports
-- **TCP 7878** - Web Interface
+- **TCP 8081** - Web Interface
 
 ## Volumes
 - **/volumes/config** - Sickbeard configuration data
@@ -23,5 +23,5 @@ docker build -t sickbeard .
 ## Running
 The quickest way to get it running
 ```
-docker run --restart always -d -h *your_host_name* -v /*your_config_location*:/volumes/config  -v /*your_videos_location*:/volumes/media -v /*your_download_location*:/volumes/download -p 7878:7878 guillaumelebeau/docker-sickbeard
+docker run --restart always -d -h *your_host_name* -v /*your_config_location*:/volumes/config  -v /*your_videos_location*:/volumes/media -v /*your_download_location*:/volumes/download -p 8081:8081 guillaumelebeau/docker-sickbeard
 ```
