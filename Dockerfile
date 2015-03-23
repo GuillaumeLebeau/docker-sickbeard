@@ -15,14 +15,14 @@ RUN apt-get install -qy --force-yes python-cheetah wget tar ca-certificates curl
 # mv /midgetspy-Sick-Beard-* /sickbeard/ &&\
 # rm  /sickbeard.tgz
 
-RUN git clone https://github.com/sarakha63/Sick-Beard.git /sickbeard
+RUN git clone https://github.com/GuillaumeLebeau/Sick-Beard.git /sickbeard
 
 # apt clean
 RUN apt-get clean &&\
   rm -rf /var/lib/apt/lists/* &&\
   rm -rf /tmp/*
 
-EXPOSE 7878
+EXPOSE 8081
 VOLUME /volumes/config
 VOLUME /volumes/download
 VOLUME /volumes/media
