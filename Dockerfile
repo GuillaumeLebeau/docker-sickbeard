@@ -22,12 +22,12 @@ RUN apt-get clean &&\
   rm -rf /var/lib/apt/lists/* &&\
   rm -rf /tmp/*
 
-VOLUME /config
-VOLUME /data
+EXPOSE 7878
+VOLUME /volumes/config
+VOLUME /volumes/download
+VOLUME /volumes/media
 
 ADD ./start.sh /start.sh
 RUN chmod u+x  /start.sh
-
-EXPOSE 7878
 
 CMD ["/start.sh"]
